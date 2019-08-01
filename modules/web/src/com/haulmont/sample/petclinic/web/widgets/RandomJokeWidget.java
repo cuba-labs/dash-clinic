@@ -9,6 +9,7 @@ import com.haulmont.cuba.gui.screen.Subscribe;
 import com.haulmont.cuba.gui.screen.UiController;
 import com.haulmont.cuba.gui.screen.UiDescriptor;
 import org.slf4j.Logger;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -40,13 +41,14 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
     }
 
     private String getNewJoke() {
-        String url = "https://icanhazdadjoke.com";
+        String host = "icanhazdadjoke.com";
+        String url = "https://" + host;
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "text/plain");
         headers.set("User-Agent", "CubaDashboardDemoApp");
         headers.set("Cache-Control", "no-cache");
-        headers.set("Host", "icanhazdadjoke.com");
+        headers.set("Host", host);
         HttpEntity<String> request = new HttpEntity<>("", headers);
 
 

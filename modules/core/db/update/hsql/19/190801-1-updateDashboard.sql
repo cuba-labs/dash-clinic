@@ -2,7 +2,7 @@
 -- Update dashboard
 ----------------------------------------------------------------------------------------------------
 UPDATE DASHBOARD_PERSISTENT_DASHBOARD
-SET VERSION=9, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_TS='2019-08-01 09:51:35.349', UPDATED_BY='admin', DELETE_TS=NULL, DELETED_BY=NULL, DASHBOARD_MODEL='{
+SET VERSION=10, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_TS='2019-08-01 11:33:54.063', UPDATED_BY='admin', DELETE_TS=NULL, DELETED_BY=NULL, DASHBOARD_MODEL='{
   "title": "Test dashboard",
   "code": "test-dashboard",
   "visualModel": {
@@ -56,6 +56,52 @@ SET VERSION=9, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_T
               "md": 6,
               "lg": 3,
               "id": "7f2a2925-efa8-2962-2a3b-66c970536429",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "random-joke-1",
+                    "caption": "My Random Joke",
+                    "name": "Random Joke",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "petclinic_RandomJokeWidget",
+                    "createdBy": "admin",
+                    "id": "cef6224a-8716-f9fb-f2ab-d92a9b4da6e8",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 400,
+                  "height": -1,
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "id": "260c3fcb-f2ee-9463-20cb-ea447a3305af",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 2,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "0470e79a-aad2-8851-6dbe-2c717f9bb285",
               "__state": 1,
               "__securityState": null,
               "dynamicAttributes": null,
