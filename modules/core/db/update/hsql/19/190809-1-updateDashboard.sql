@@ -1,0 +1,194 @@
+UPDATE DASHBOARD_PERSISTENT_DASHBOARD
+SET VERSION=13, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_TS='2019-08-08 15:05:22.523', UPDATED_BY='admin', DELETE_TS=NULL, DELETED_BY=NULL, DASHBOARD_MODEL='{
+  "title": "Test dashboard",
+  "code": "test-dashboard",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.ResponsiveLayout",
+        "data": {
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 3,
+          "areas": [
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": true,
+                    "widgetId": "flying-pikachu",
+                    "caption": "Pikachu!",
+                    "name": "Flying Pikachu",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "petclinic_FlyingPikachuWidget",
+                    "createdBy": "admin",
+                    "id": "2cc12064-6fb8-c996-7f26-40f438187733",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": -1,
+                  "height": -1,
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "id": "1ec2e4c1-55f1-c41d-8ae2-be05b1faf5c2",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 1,
+              "xs": 12,
+              "sm": 6,
+              "md": 6,
+              "lg": 3,
+              "id": "7f2a2925-efa8-2962-2a3b-66c970536429",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "random-joke-1",
+                    "caption": "My Random Joke",
+                    "name": "Random Joke",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "petclinic_RandomJokeWidget",
+                    "createdBy": "admin",
+                    "id": "cef6224a-8716-f9fb-f2ab-d92a9b4da6e8",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": -1,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "260c3fcb-f2ee-9463-20cb-ea447a3305af",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 2,
+              "xs": 12,
+              "sm": 6,
+              "md": 6,
+              "lg": 4,
+              "id": "0470e79a-aad2-8851-6dbe-2c717f9bb285",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Visits",
+                    "caption": "Visits",
+                    "name": "Visits Calendar",
+                    "description": "Visits Calendar",
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "petclinic_VisitsCalendarWidget",
+                    "createdBy": "admin",
+                    "id": "63e923df-010a-2c98-9670-4c3203ba25a8",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 500,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "de3b7bdc-cee8-27cf-009a-581c75e3352f",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 3,
+              "xs": 12,
+              "sm": 6,
+              "md": 6,
+              "lg": 4,
+              "id": "c442fec8-1edc-00d2-5c1f-db076c467d96",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            }
+          ],
+          "children": [],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "bf9212b0-0164-8107-f56d-2f06ecd13a47",
+          "__state": 1,
+          "__securityState": null,
+          "dynamicAttributes": null,
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "7fdadb9d-944b-9a70-def1-44e43fb0529e",
+    "__state": 1,
+    "__securityState": null,
+    "dynamicAttributes": null,
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 30,
+  "assistantBeanName": null,
+  "id": "a59d6039-6617-f2f4-2110-6bef60f62212",
+  "__state": 1,
+  "__securityState": null,
+  "dynamicAttributes": null,
+  "_persistence_fetchGroup": null
+}', NAME='Test dashboard', REFERENCE_NAME='test-dashboard', GROUP_ID=NULL, IS_AVAILABLE_FOR_ALL_USERS=true
+WHERE ID='ec3c1a1d-8c19-6533-d00b-52ace896885d';

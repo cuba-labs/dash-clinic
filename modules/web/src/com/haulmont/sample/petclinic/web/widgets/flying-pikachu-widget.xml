@@ -2,7 +2,7 @@
 <fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd"
           class="com.haulmont.sample.petclinic.web.widgets.FlyingPikachuWidget">
     <layout>
-        <image alternateText="Flying Pikachu" height="AUTO" width="AUTO" scaleMode="FILL">
+        <image id="pokemonImage" alternateText="Flying Pikachu" height="AUTO" width="AUTO" scaleMode="FILL">
             <relativePath path="VAADIN/images/pikachu_art.png"/>
         </image>
     </layout>
