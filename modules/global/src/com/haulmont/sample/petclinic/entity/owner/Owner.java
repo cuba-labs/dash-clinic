@@ -50,7 +50,6 @@ public class Owner extends Person {
         return pets;
     }
 
-
     public void setAddress(String address) {
         this.address = address;
     }
