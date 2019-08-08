@@ -30,17 +30,12 @@ public class VisitsCalendarWidget extends ScreenFragment {
     @Inject
     private CollectionContainer<Visit> visitsDc;
     @Inject
-    private DatePicker<Date> monthPicker;
-    @Inject
-    private TimeSource timeSource;
-    @Inject
     private Calendar visitsCalendar;
 
     @Subscribe
     private void onAfterInit(AfterInitEvent event) {
         visitsDl.load();
 
-        int eventsCount = 0;
         for (Visit v : visitsDc.getItems()) {
             SimpleCalendarEvent calendarEvent = new SimpleCalendarEvent();
             calendarEvent.setCaption(v.getPet().getName());
@@ -48,8 +43,6 @@ public class VisitsCalendarWidget extends ScreenFragment {
             calendarEvent.setEnd(v.getVisitDate());
             calendarEvent.setAllDay(true);
             visitsCalendar.getEventProvider().addEvent(calendarEvent);
-
-            eventsCount += 1;
         }
     }
 
