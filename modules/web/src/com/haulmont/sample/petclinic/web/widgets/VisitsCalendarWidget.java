@@ -1,7 +1,11 @@
 package com.haulmont.sample.petclinic.web.widgets;
 
+import com.haulmont.addon.dashboard.model.Dashboard;
+import com.haulmont.addon.dashboard.model.Widget;
 import com.haulmont.addon.dashboard.web.annotation.DashboardWidget;
+import com.haulmont.addon.dashboard.web.annotation.WidgetParam;
 import com.haulmont.cuba.core.global.TimeSource;
+import com.haulmont.cuba.gui.WindowParam;
 import com.haulmont.cuba.gui.components.Calendar;
 import com.haulmont.cuba.gui.components.DatePicker;
 import com.haulmont.cuba.gui.components.HasValue;
