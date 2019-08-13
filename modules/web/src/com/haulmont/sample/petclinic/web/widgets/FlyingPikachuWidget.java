@@ -13,34 +13,39 @@ import com.haulmont.cuba.gui.screen.UiDescriptor;
 import com.haulmont.sample.petclinic.entity.pet.Pet;
 
 import javax.inject.Inject;
+import java.util.Optional;
 
 
 @UiController("petclinic_FlyingPikachuWidget")
 @UiDescriptor("flying-pikachu-widget.xml")
-@DashboardWidget(name = "Flying Pikachu")
+@DashboardWidget(name = "Flying Pikachu", editFrameId = "petclinic_FlyingPikachuWidgetEditor")
 public class FlyingPikachuWidget extends ScreenFragment {
     @Inject
     private Image pokemonImage;
 
-    @WidgetParam
-    @WindowParam
-    protected Pet pet;
-
     @WindowParam
     protected Widget widget;
 
+    @WindowParam
+    @WidgetParam
+    protected String petName;
+
+    @WindowParam
+    @WidgetParam
+    protected String petArtResource;
+
     @Subscribe
     private void onInit(InitEvent event) {
-        if (pet != null && pet.getName() != null) {
-            String path = "VAADIN/images/" + pet.getName().toLowerCase() + "_art.png";
-            RelativePathResource relativePathResource = pokemonImage.createResource(RelativePathResource.class).setPath(path);
-            pokemonImage.setSource(relativePathResource);
-            pokemonImage.setAlternateText(pet.getName());
-            widget.setCaption(pet.getName());
-        } else {
-            widget.setCaption("Pikachu!");
+        if (petName != null && petArtResource != null) {
+            setPet(petName, petArtResource);
         }
     }
-    
-    
+
+    private void setPet(String name, String resourcePath) {
+        widget.setCaption(name);
+
+        RelativePathResource relativePathResource = pokemonImage.createResource(RelativePathResource.class).setPath(resourcePath);
+        pokemonImage.setSource(relativePathResource);
+        pokemonImage.setAlternateText(name);
+    }
 }

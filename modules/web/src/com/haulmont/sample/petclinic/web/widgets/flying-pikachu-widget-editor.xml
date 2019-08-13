@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd"
+        messagesPack="com.haulmont.sample.petclinic.web.widgets">
+    <layout expand="hBox">
+        <hbox id="hBox" width="100%" spacing="true">
+            <label value="msg://flying-pikachu-editor.label.value"/>
+            <lookupField id="artLookup" textInputAllowed="true" nullOptionVisible="false"/>
+        </hbox>
+    </layout>
+</fragment>
