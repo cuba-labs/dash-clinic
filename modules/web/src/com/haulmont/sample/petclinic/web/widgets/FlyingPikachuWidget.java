@@ -10,10 +10,8 @@ import com.haulmont.cuba.gui.screen.ScreenFragment;
 import com.haulmont.cuba.gui.screen.Subscribe;
 import com.haulmont.cuba.gui.screen.UiController;
 import com.haulmont.cuba.gui.screen.UiDescriptor;
-import com.haulmont.sample.petclinic.entity.pet.Pet;
 
 import javax.inject.Inject;
-import java.util.Optional;
 
 
 @UiController("petclinic_FlyingPikachuWidget")
