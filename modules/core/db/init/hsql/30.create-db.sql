@@ -433,7 +433,7 @@ WHERE ID='ec3c1a1d-8c19-6533-d00b-52ace896885d';
 
 INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
-VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 1, '2019-08-29 17:58:18.394', 'admin', '2019-08-29 17:58:18.394', NULL, NULL, NULL, '{
+VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'admin', '2019-08-30 18:21:22.196', 'admin', NULL, NULL, '{
   "title": "Main Dashboard",
   "code": "main-dashboard",
   "visualModel": {
@@ -568,7 +568,23 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 1, '2019-08-29 17:58:18.394', 'ad
     "dynamicAttributes": null,
     "_persistence_fetchGroup": null
   },
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "Font style",
+      "alias": "font-style",
+      "parameterValue": {
+        "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+        "data": {
+          "value": "huge"
+        }
+      },
+      "id": "a9f08815-d3b5-28f1-b0ce-e3a95de4d0d4",
+      "__state": 0,
+      "__securityState": null,
+      "dynamicAttributes": null,
+      "_persistence_fetchGroup": null
+    }
+  ],
   "isAvailableForAllUsers": true,
   "createdBy": "admin",
   "timerDelay": 0,

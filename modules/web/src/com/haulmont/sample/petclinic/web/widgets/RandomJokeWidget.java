@@ -1,8 +1,10 @@
 package com.haulmont.sample.petclinic.web.widgets;
 
 import com.haulmont.addon.dashboard.web.annotation.DashboardWidget;
+import com.haulmont.addon.dashboard.web.annotation.WidgetParam;
 import com.haulmont.addon.dashboard.web.events.DashboardEvent;
 import com.haulmont.addon.dashboard.web.widget.RefreshableWidget;
+import com.haulmont.cuba.gui.WindowParam;
 import com.haulmont.cuba.gui.components.TextArea;
 import com.haulmont.cuba.gui.screen.ScreenFragment;
 import com.haulmont.cuba.gui.screen.Subscribe;
@@ -27,10 +29,17 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
     @Inject
     private Logger log;
 
+    @WindowParam(name="font-style")
+    @WidgetParam
+    private String fontStyle;
+
     private int errorsCount = 0;
 
     @Subscribe
     private void onAfterInit(AfterInitEvent event) {
+        if (fontStyle != null) {
+            randomJoke.addStyleName(fontStyle);
+        }
         randomJoke.setValue(getNewJoke());
     }
 

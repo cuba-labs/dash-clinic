@@ -64,7 +64,8 @@
             <dashboard:dashboard id="mainDashboard"
                                  code="main-dashboard"
                                  timerDelay="60"
-                                 width="100%"/>
+                                 width="100%">
+            </dashboard:dashboard>
           </vbox>
         </main:initialLayout>
       </main:workArea>
