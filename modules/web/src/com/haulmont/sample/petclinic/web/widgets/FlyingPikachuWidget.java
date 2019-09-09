@@ -39,7 +39,7 @@ public class FlyingPikachuWidget extends ScreenFragment {
         }
     }
 
-    private void setPet(String name, String resourcePath) {
+    public void setPet(String name, String resourcePath) {
         widget.setCaption(name);
 
         RelativePathResource relativePathResource = pokemonImage.createResource(RelativePathResource.class).setPath(resourcePath);
