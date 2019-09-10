@@ -3,6 +3,7 @@ package com.haulmont.sample.petclinic.web.widgets;
 import com.haulmont.addon.dashboard.web.annotation.DashboardWidget;
 import com.haulmont.addon.dashboard.web.annotation.WidgetParam;
 import com.haulmont.addon.dashboard.web.events.DashboardEvent;
+import com.haulmont.addon.dashboard.web.events.DashboardUpdatedEvent;
 import com.haulmont.addon.dashboard.web.widget.RefreshableWidget;
 import com.haulmont.cuba.gui.WindowParam;
 import com.haulmont.cuba.gui.components.TextArea;
@@ -11,6 +12,7 @@ import com.haulmont.cuba.gui.screen.Subscribe;
 import com.haulmont.cuba.gui.screen.UiController;
 import com.haulmont.cuba.gui.screen.UiDescriptor;
 import org.slf4j.Logger;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -46,6 +48,11 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
     @Override
     public void refresh(DashboardEvent dashboardEvent) {
         randomJoke.setValue(getNewJoke());
+    }
+
+    @EventListener
+    public void dashboardEventListener(DashboardUpdatedEvent event) {
+        log.info("DashboardUpdatedEvent received by RandomWJoke Widget");
     }
 
     private String getNewJoke() {
