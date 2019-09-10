@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd"
+          xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
           class="com.haulmont.sample.petclinic.web.widgets.VisitsCalendarWidget">
     <data>
         <collection id="visitsDc"
                     class="com.haulmont.sample.petclinic.entity.visit.Visit"
                     view="visit-with-pet">
             <loader id="visitsDl">
-                <query>SELECT v FROM petclinic_Visit v ORDER BY v.visitDate DESC</query>
+                <query>SELECT v FROM petclinic_Visit v ORDER BY v.visitDate DESC
+                    <condition>
+                        <and>
+                            <c:jpql>
+                                <c:where><![CDATA[v.visitDate >= :startDate]]></c:where>
+                            </c:jpql>
+                            <c:jpql>
+                                <c:where><![CDATA[v.visitDate <= :endDate]]></c:where>
+                            </c:jpql>
+                        </and>
+                    </condition>
+                </query>
             </loader>
         </collection>
     </data>

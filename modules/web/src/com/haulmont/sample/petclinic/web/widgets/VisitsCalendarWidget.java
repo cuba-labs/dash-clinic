@@ -32,6 +32,12 @@ public class VisitsCalendarWidget extends ScreenFragment {
 
     @Subscribe
     private void onAfterInit(AfterInitEvent event) {
+        reloadSchedule();
+    }
+
+    public void reloadSchedule() {
+        visitsDl.setParameter("startDate", visitsCalendar.getStartDate());
+        visitsDl.setParameter("endDate", visitsCalendar.getEndDate());
         visitsDl.load();
 
         for (Visit v : visitsDc.getItems()) {
@@ -44,6 +50,7 @@ public class VisitsCalendarWidget extends ScreenFragment {
         }
     }
 
+
     @Subscribe("monthPicker")
     private void onMonthPickerValueChange(HasValue.ValueChangeEvent<Date> event) {
         java.util.Calendar c = new GregorianCalendar();
@@ -51,5 +58,6 @@ public class VisitsCalendarWidget extends ScreenFragment {
         c.add(DAY_OF_MONTH, c.getActualMaximum(DAY_OF_MONTH));
         visitsCalendar.setStartDate(event.getValue());
         visitsCalendar.setEndDate(c.getTime());
+        reloadSchedule();
     }
 }
