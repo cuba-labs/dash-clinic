@@ -175,10 +175,11 @@ INSERT INTO PETCLINIC_VISIT (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDA
 INSERT INTO PETCLINIC_VISIT (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, VISIT_DATE, DESCRIPTION, PET_ID) VALUES ('d22b32fb-d0b5-128e-78e8-2e5ee6309903', 1, '2018-11-07 07:52:19.584000', 'admin', '2018-11-07 07:52:19.584000', null, null, null, '2019-08-04', null, '8b249acd-4c73-c4e7-bb9f-288ff4624ac1');
 
 ----------------------------------------------------------------------------------------------------
--- Inserting Test dashboard
+-- Inserting Dashboards
 ----------------------------------------------------------------------------------------------------
-INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD (ID,VERSION,CREATE_TS,CREATED_BY,UPDATE_TS,UPDATED_BY,DELETE_TS,DELETED_BY,DASHBOARD_MODEL,NAME,REFERENCE_NAME,GROUP_ID,IS_AVAILABLE_FOR_ALL_USERS) VALUES (
-'ec3c1a1d-8c19-6533-d00b-52ace896885d',6,'2019-07-31 16:14:40.631','admin','2019-07-31 21:30:32.554','admin',NULL,NULL,'{
+insert into DASHBOARD_PERSISTENT_DASHBOARD
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
+values ('ec3c1a1d-8c19-6533-d00b-52ace896885d', 12, '2019-07-31 16:14:40', 'admin', '2019-10-22 09:34:09', 'admin', null, null, '{
   "title": "Test dashboard",
   "code": "test-dashboard",
   "visualModel": {
@@ -197,15 +198,46 @@ INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD (ID,VERSION,CREATE_TS,CREATED_BY,UPDA
                 "data": {
                   "widget": {
                     "showWidgetCaption": true,
-                    "widgetId": "flying-pikachu",
-                    "caption": "Pikachu!",
-                    "name": "Flying Pikachu",
+                    "widgetId": "pokemon-art",
+                    "caption": "Crobat",
+                    "name": "Pokemon Art",
                     "description": null,
                     "parameters": [],
-                    "widgetFields": [],
-                    "frameId": "petclinic_FlyingPikachuWidget",
+                    "widgetFields": [
+                      {
+                        "name": "petName",
+                        "alias": "petName",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "Crobat"
+                          }
+                        },
+                        "id": "98d0795c-907d-55c7-55b0-df41f61e3c32",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      },
+                      {
+                        "name": "petArtResource",
+                        "alias": "petArtResource",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "VAADIN/images/crobat_art.png"
+                          }
+                        },
+                        "id": "b95c1951-fddf-afd4-7ee2-7557b0a607a7",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      }
+                    ],
+                    "frameId": "petclinic_PokemonArtWidget",
                     "createdBy": "admin",
-                    "id": "2cc12064-6fb8-c996-7f26-40f438187733",
+                    "id": "0b1f1b62-3046-a8a8-3ba8-fbd51f779464",
                     "__state": 0,
                     "__securityState": null,
                     "dynamicAttributes": null,
@@ -215,11 +247,11 @@ INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD (ID,VERSION,CREATE_TS,CREATED_BY,UPDA
                   "weight": 1,
                   "expand": null,
                   "styleName": null,
-                  "width": -1,
-                  "height": -1,
-                  "widthUnit": "px",
-                  "heightUnit": "px",
-                  "id": "1ec2e4c1-55f1-c41d-8ae2-be05b1faf5c2",
+                  "width": 100,
+                  "height": 100,
+                  "widthUnit": "%",
+                  "heightUnit": "%",
+                  "id": "53e6c34a-65a2-92df-d5dd-803d2678bc39",
                   "__state": 1,
                   "__securityState": null,
                   "dynamicAttributes": null,
@@ -227,162 +259,11 @@ INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD (ID,VERSION,CREATE_TS,CREATED_BY,UPDA
                 }
               },
               "order": 1,
-              "xs": 12,
-              "sm": 6,
-              "md": 6,
-              "lg": 3,
-              "id": "7f2a2925-efa8-2962-2a3b-66c970536429",
-              "__state": 1,
-              "__securityState": null,
-              "dynamicAttributes": null,
-              "_persistence_fetchGroup": null
-            }
-          ],
-          "children": [],
-          "weight": 1,
-          "expand": null,
-          "styleName": null,
-          "width": 100,
-          "height": 100,
-          "widthUnit": "%",
-          "heightUnit": "%",
-          "id": "bf9212b0-0164-8107-f56d-2f06ecd13a47",
-          "__state": 1,
-          "__securityState": null,
-          "dynamicAttributes": null,
-          "_persistence_fetchGroup": null
-        }
-      }
-    ],
-    "weight": 1,
-    "expand": null,
-    "styleName": null,
-    "width": 100,
-    "height": 100,
-    "widthUnit": "%",
-    "heightUnit": "%",
-    "id": "7fdadb9d-944b-9a70-def1-44e43fb0529e",
-    "__state": 1,
-    "__securityState": null,
-    "dynamicAttributes": null,
-    "_persistence_fetchGroup": null
-  },
-  "parameters": [],
-  "isAvailableForAllUsers": true,
-  "createdBy": "admin",
-  "timerDelay": 0,
-  "assistantBeanName": null,
-  "id": "a59d6039-6617-f2f4-2110-6bef60f62212",
-  "__state": 1,
-  "__securityState": null,
-  "dynamicAttributes": null,
-  "_persistence_fetchGroup": null
-}','Test dashboard','test-dashboard',NULL,true);
-
-----------------------------------------------------------------------------------------------------
--- Update dashboard
-----------------------------------------------------------------------------------------------------
-UPDATE DASHBOARD_PERSISTENT_DASHBOARD
-SET VERSION=10, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_TS='2019-08-01 11:33:54.063', UPDATED_BY='admin', DELETE_TS=NULL, DELETED_BY=NULL, DASHBOARD_MODEL='{
-  "title": "Test dashboard",
-  "code": "test-dashboard",
-  "visualModel": {
-    "children": [
-      {
-        "className": "com.haulmont.addon.dashboard.model.visualmodel.ResponsiveLayout",
-        "data": {
-          "xs": 12,
-          "sm": 6,
-          "md": 6,
-          "lg": 3,
-          "areas": [
-            {
-              "component": {
-                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
-                "data": {
-                  "widget": {
-                    "showWidgetCaption": true,
-                    "widgetId": "flying-pikachu",
-                    "caption": "Pikachu!",
-                    "name": "Flying Pikachu",
-                    "description": null,
-                    "parameters": [],
-                    "widgetFields": [],
-                    "frameId": "petclinic_FlyingPikachuWidget",
-                    "createdBy": "admin",
-                    "id": "2cc12064-6fb8-c996-7f26-40f438187733",
-                    "__state": 0,
-                    "__securityState": null,
-                    "dynamicAttributes": null,
-                    "_persistence_fetchGroup": null
-                  },
-                  "children": [],
-                  "weight": 1,
-                  "expand": null,
-                  "styleName": null,
-                  "width": -1,
-                  "height": -1,
-                  "widthUnit": "px",
-                  "heightUnit": "px",
-                  "id": "1ec2e4c1-55f1-c41d-8ae2-be05b1faf5c2",
-                  "__state": 1,
-                  "__securityState": null,
-                  "dynamicAttributes": null,
-                  "_persistence_fetchGroup": null
-                }
-              },
-              "order": 1,
-              "xs": 12,
-              "sm": 6,
-              "md": 6,
-              "lg": 3,
-              "id": "7f2a2925-efa8-2962-2a3b-66c970536429",
-              "__state": 1,
-              "__securityState": null,
-              "dynamicAttributes": null,
-              "_persistence_fetchGroup": null
-            },
-            {
-              "component": {
-                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
-                "data": {
-                  "widget": {
-                    "showWidgetCaption": false,
-                    "widgetId": "random-joke-1",
-                    "caption": "My Random Joke",
-                    "name": "Random Joke",
-                    "description": null,
-                    "parameters": [],
-                    "widgetFields": [],
-                    "frameId": "petclinic_RandomJokeWidget",
-                    "createdBy": "admin",
-                    "id": "cef6224a-8716-f9fb-f2ab-d92a9b4da6e8",
-                    "__state": 0,
-                    "__securityState": null,
-                    "dynamicAttributes": null,
-                    "_persistence_fetchGroup": null
-                  },
-                  "children": [],
-                  "weight": 1,
-                  "expand": null,
-                  "styleName": null,
-                  "width": 400,
-                  "height": -1,
-                  "widthUnit": "px",
-                  "heightUnit": "px",
-                  "id": "260c3fcb-f2ee-9463-20cb-ea447a3305af",
-                  "__state": 1,
-                  "__securityState": null,
-                  "dynamicAttributes": null,
-                  "_persistence_fetchGroup": null
-                }
-              },
-              "order": 2,
               "xs": null,
               "sm": null,
               "md": null,
               "lg": null,
-              "id": "0470e79a-aad2-8851-6dbe-2c717f9bb285",
+              "id": "eb09c1a8-7b0c-d8c3-2d65-3dc5371ea6be",
               "__state": 1,
               "__securityState": null,
               "dynamicAttributes": null,
@@ -421,19 +302,18 @@ SET VERSION=10, CREATE_TS='2019-07-31 16:14:40.631', CREATED_BY='admin', UPDATE_
   "parameters": [],
   "isAvailableForAllUsers": true,
   "createdBy": "admin",
-  "timerDelay": 30,
+  "timerDelay": null,
   "assistantBeanName": null,
   "id": "a59d6039-6617-f2f4-2110-6bef60f62212",
   "__state": 1,
   "__securityState": null,
   "dynamicAttributes": null,
   "_persistence_fetchGroup": null
-}', NAME='Test dashboard', REFERENCE_NAME='test-dashboard', GROUP_ID=NULL, IS_AVAILABLE_FOR_ALL_USERS=true
-WHERE ID='ec3c1a1d-8c19-6533-d00b-52ace896885d';
+}', 'Test dashboard', 'test-dashboard', null, true);
 
-INSERT INTO DASHBOARD_PERSISTENT_DASHBOARD
+insert into DASHBOARD_PERSISTENT_DASHBOARD
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
-VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'admin', '2019-08-30 18:21:22.196', 'admin', NULL, NULL, '{
+values ('83c3b560-bec2-1777-284d-d8a65acaaade', 5, '2019-08-29 17:58:18', 'admin', '2019-10-22 09:35:33', 'admin', null, null, '{
   "title": "Main Dashboard",
   "code": "main-dashboard",
   "visualModel": {
@@ -470,10 +350,10 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
                   "weight": 1,
                   "expand": null,
                   "styleName": null,
-                  "width": 100,
-                  "height": 100,
-                  "widthUnit": "%",
-                  "heightUnit": "%",
+                  "width": 400,
+                  "height": -1,
+                  "widthUnit": "px",
+                  "heightUnit": "px",
                   "id": "7db23ddf-f3d2-7ce0-a8cb-7bb6c42cc6bc",
                   "__state": 1,
                   "__securityState": null,
@@ -481,12 +361,89 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
                   "_persistence_fetchGroup": null
                 }
               },
-              "order": 1,
+              "order": 2,
               "xs": 12,
               "sm": 6,
-              "md": 6,
-              "lg": 6,
+              "md": 4,
+              "lg": 4,
               "id": "471c7211-0cb8-eac4-4f0a-91dcb21532a0",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": true,
+                    "widgetId": "pokemon-art",
+                    "caption": "Pikachu",
+                    "name": "Pokemon Art",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [
+                      {
+                        "name": "petName",
+                        "alias": "petName",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "Pikachu"
+                          }
+                        },
+                        "id": "98b3e953-57ce-b8b3-cd23-582b9c98476d",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      },
+                      {
+                        "name": "petArtResource",
+                        "alias": "petArtResource",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "VAADIN/images/pikachu_art.png"
+                          }
+                        },
+                        "id": "6fc909fd-9798-07a4-bb0e-fd9760e90045",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      }
+                    ],
+                    "frameId": "petclinic_PokemonArtWidget",
+                    "createdBy": "admin",
+                    "id": "8a4ef39d-96d7-92f5-3238-bc0b3482a187",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": -1,
+                  "height": -1,
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "id": "1c456754-753d-324a-cfc3-34878224c9b4",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 1,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "914bd037-8ed6-e9c5-e6e2-d0eb00a9cee7",
               "__state": 1,
               "__securityState": null,
               "dynamicAttributes": null,
@@ -517,9 +474,9 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
                   "expand": null,
                   "styleName": null,
                   "width": 100,
-                  "height": 100,
+                  "height": 500,
                   "widthUnit": "%",
-                  "heightUnit": "%",
+                  "heightUnit": "px",
                   "id": "ed8d0d8c-5322-8984-a977-97a9c6f86668",
                   "__state": 1,
                   "__securityState": null,
@@ -527,11 +484,11 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
                   "_persistence_fetchGroup": null
                 }
               },
-              "order": 2,
+              "order": 3,
               "xs": 12,
               "sm": 6,
-              "md": 6,
-              "lg": 6,
+              "md": 5,
+              "lg": 5,
               "id": "4a4ca612-56ee-9ea1-1893-1e50a4974d58",
               "__state": 1,
               "__securityState": null,
@@ -570,8 +527,8 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
   },
   "parameters": [
     {
-      "name": "Font style",
-      "alias": "font-style",
+      "name": "Font Size",
+      "alias": "font-size",
       "parameterValue": {
         "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
         "data": {
@@ -587,13 +544,13 @@ VALUES('83c3b560-bec2-1777-284d-d8a65acaaade', 3, '2019-08-29 17:58:18.394', 'ad
   ],
   "isAvailableForAllUsers": true,
   "createdBy": "admin",
-  "timerDelay": 0,
-  "assistantBeanName": null,
+  "timerDelay": 15,
+  "assistantBeanName": "visitScheduleAssistant",
   "id": "3bac87aa-7ce1-4b51-1828-faa724272d3d",
   "__state": 1,
   "__securityState": null,
   "dynamicAttributes": null,
   "_persistence_fetchGroup": null
-}', 'Main Dashboard', 'main-dashboard', NULL, true);
+}', 'Main Dashboard', 'main-dashboard', null, true);
 
 

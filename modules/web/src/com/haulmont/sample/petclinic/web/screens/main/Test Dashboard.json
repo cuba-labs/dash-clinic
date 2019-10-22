@@ -1,0 +1,131 @@
+{
+  "title": "Test Dashboard",
+  "code": "test-dashboard",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.ResponsiveLayout",
+        "data": {
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 3,
+          "areas": [
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": true,
+                    "widgetId": "pokemon-art",
+                    "caption": "Crobat",
+                    "name": "Pokemon Art",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [
+                      {
+                        "name": "petName",
+                        "alias": "petName",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "Crobat"
+                          }
+                        },
+                        "id": "b7cb8ea4-e115-a74b-0007-b70597a92b67",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      },
+                      {
+                        "name": "petArtResource",
+                        "alias": "petArtResource",
+                        "parameterValue": {
+                          "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                          "data": {
+                            "value": "VAADIN/images/crobat_art.png"
+                          }
+                        },
+                        "id": "9477e7b5-b5af-e1e7-8193-b1bbbb1c247b",
+                        "__state": 1,
+                        "__securityState": null,
+                        "dynamicAttributes": null,
+                        "_persistence_fetchGroup": null
+                      }
+                    ],
+                    "frameId": "petclinic_PokemonArtWidget",
+                    "createdBy": "admin",
+                    "id": "26ebf11d-c153-626a-7cf6-e8737edb79b4",
+                    "__state": 0,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": -1,
+                  "height": -1,
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "id": "72ac35e9-9233-11d6-f8d6-8c18ce0e631e",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 1,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "36defe2d-9e4a-33e1-c23d-991e4c527d9a",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            }
+          ],
+          "children": [],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "d291229a-883c-5b72-2410-d0bd7c19d2a5",
+          "__state": 1,
+          "__securityState": null,
+          "dynamicAttributes": null,
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "e84e4873-4ba2-6d82-8d6a-83a67b84eaa8",
+    "__state": 1,
+    "__securityState": null,
+    "dynamicAttributes": null,
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "assistantBeanName": null,
+  "id": "af142383-86ce-1e7d-73b0-b517244ba5ca",
+  "__state": 1,
+  "__securityState": null,
+  "dynamicAttributes": null,
+  "_persistence_fetchGroup": null
+}

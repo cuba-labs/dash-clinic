@@ -14,10 +14,10 @@ import com.haulmont.cuba.gui.screen.UiDescriptor;
 import javax.inject.Inject;
 
 
-@UiController("petclinic_FlyingPikachuWidget")
-@UiDescriptor("flying-pikachu-widget.xml")
-@DashboardWidget(name = "Flying Pikachu", editFrameId = "petclinic_FlyingPikachuWidgetEditor")
-public class FlyingPikachuWidget extends ScreenFragment {
+@UiController("petclinic_PokemonArtWidget")
+@UiDescriptor("pokemon-art-widget.xml")
+@DashboardWidget(name = "Pokemon Art", editFrameId = "petclinic_PokemonArtWidgetEditor")
+public class PokemonArtWidget extends ScreenFragment {
     @Inject
     private Image pokemonImage;
 

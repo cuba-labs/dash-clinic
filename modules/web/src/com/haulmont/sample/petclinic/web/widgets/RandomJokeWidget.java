@@ -31,16 +31,16 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
     @Inject
     private Logger log;
 
-    @WindowParam(name="font-style")
+    @WindowParam(name = "font-size")
     @WidgetParam
-    private String fontStyle;
+    private String fontSize;
 
     private int errorsCount = 0;
 
     @Subscribe
     private void onAfterInit(AfterInitEvent event) {
-        if (fontStyle != null) {
-            randomJoke.addStyleName(fontStyle);
+        if (fontSize != null) {
+            randomJoke.addStyleName(fontSize);
         }
         randomJoke.setValue(getNewJoke());
     }
@@ -48,6 +48,7 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
     @Override
     public void refresh(DashboardEvent dashboardEvent) {
         randomJoke.setValue(getNewJoke());
+        randomJoke.setStyleName(fontSize);
     }
 
     @EventListener
@@ -71,12 +72,10 @@ public class RandomJokeWidget extends ScreenFragment implements RefreshableWidge
             ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
             if (response.getStatusCode() == HttpStatus.OK) {
                 return response.getBody();
-            }
-            else {
+            } else {
                 log.error("Can't fetch a joke, response: " + response.toString());
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             log.error("Can't fetch a joke", e);
         }
 
